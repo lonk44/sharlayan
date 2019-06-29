@@ -64,7 +64,7 @@ namespace Sharlayan.Utilities {
 
                 // 0x17D - 0 = Green name, 4 = non-agro (yellow name)
                 entry.IsGM = BitConverter.TryToBoolean(source, MemoryHandler.Instance.Structures.ActorItem.IsGM); // ?
-                entry.IconID = source[MemoryHandler.Instance.Structures.ActorItem.Icon];
+                entry.IconID = source[/*MemoryHandler.Instance.Structures.ActorItem.Icon*/6368];
                 entry.Icon = (Actor.Icon) entry.IconID;
 
                 entry.StatusID = source[MemoryHandler.Instance.Structures.ActorItem.Status];
@@ -77,7 +77,7 @@ namespace Sharlayan.Utilities {
                 entry.JobID = source[MemoryHandler.Instance.Structures.ActorItem.Job + defaultStatOffset];
                 entry.Job = (Actor.Job) entry.JobID;
 
-                entry.Level = source[MemoryHandler.Instance.Structures.ActorItem.Level + defaultStatOffset];
+                entry.Level = source[/*MemoryHandler.Instance.Structures.ActorItem.Level*/6366 + defaultStatOffset];
                 entry.GrandCompany = source[MemoryHandler.Instance.Structures.ActorItem.GrandCompany + defaultStatOffset];
                 entry.GrandCompanyRank = source[MemoryHandler.Instance.Structures.ActorItem.GrandCompanyRank + defaultStatOffset];
                 entry.Title = source[MemoryHandler.Instance.Structures.ActorItem.Title + defaultStatOffset];
